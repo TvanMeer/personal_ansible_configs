@@ -1,0 +1,9 @@
+---
+- name: create system users
+  import_tasks: system_setup/users.yml
+
+- name: setup cronjobs
+  import_tasks: system_setup/cron.yml
+
+- name: install packages through standard package manager
+  import_tasks: software/packages.yml

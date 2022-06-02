@@ -1,0 +1,7 @@
+---
+- name: Install apt packages
+  apt:
+    name: 
+      - curl
+    state: latest
+    when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]

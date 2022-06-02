@@ -1,0 +1,3 @@
+---
+- name: install packages through standard package manager
+  import_tasks: software/packages.yml

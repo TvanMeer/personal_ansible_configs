@@ -1,0 +1,11 @@
+[base]
+desktop1.lan.io
+laptop1.lan.io
+vm1.lan.io
+
+[workstation]
+desktop1.lan.io
+laptop1.lan.io
+
+[server]
+vm1.lan.io
