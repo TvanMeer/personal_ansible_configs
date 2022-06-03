@@ -1,11 +1,7 @@
 [base]
-desktop1.lan.io
-laptop1.lan.io
-vm1.lan.io
+192.168.178.2
 
 [workstation]
-desktop1.lan.io
-laptop1.lan.io
+192.168.178.2
 
 [server]
-vm1.lan.io
