@@ -9,3 +9,8 @@
         update_cache: yes
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+
+  tasks:
+    - name: execute base role (all systems)
+      include_role:
+        name: base

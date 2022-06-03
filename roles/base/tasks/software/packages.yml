@@ -4,4 +4,4 @@
     name:
       - htop
     state: latest
-    when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
