@@ -9,25 +9,4 @@
         update_cache: yes
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
-
-# Apply base role on all systems
-
-- hosts: all
-  tags: base
-  become: true
-  roles:
-    - base
-
-# Apply workstation or server role
-
-- hosts: workstation
-  tags: workstation
-  become: true
-  roles:
-    - workstation
-
-- hosts: server
-  tags: server
-  become: true
-  roles:
-    - server
+      
