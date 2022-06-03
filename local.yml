@@ -11,6 +11,6 @@
       when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
   tasks:
-    - name: execute base role against this system (all systems)
-      include_role:
-        - name: base
+  - name: execute base role against this system (all systems)
+    include_role:
+      - name: base
