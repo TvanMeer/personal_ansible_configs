@@ -14,3 +14,8 @@
     - name: execute base role (all systems)
       include_role:
         name: base
+
+    - name: execute workstation role on desktop1
+      include_role:
+        name: workstation
+      when: ansible_default_ipv4.address == "192.168.178.2"
