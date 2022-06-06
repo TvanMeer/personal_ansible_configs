@@ -1,3 +1,6 @@
 ---
+- name: set wallpaper
+  import_tasks: system_setup/wallpaper.yml
+
 - name: install packages through standard package manager
-  import_tasks: software/packages.yml
+  import_tasks: software/_packages.yml

@@ -1,0 +1,19 @@
+- name: copy wallpaper file
+  copy:
+    src: wallpaper.png
+    dest: /usr/share/backgrounds/wallpaper.png
+    owner: root
+    group: root
+    mode: 0644
+
+- name: set wallpaper
+  become_user: tom
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/wallpaper.png'"
+
+- name: set wallpaper position
+  become_user: tom
+  dconf:
+    key: "/org/gnome/desktop/background/picture-options"
+    value: "'zoom'"
