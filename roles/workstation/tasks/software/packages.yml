@@ -1,3 +1,6 @@
 ---
 - name: install curl
   import_tasks: curl.yml
+
+- name: install vscodium
+  import_tasks: vscodium.yml
