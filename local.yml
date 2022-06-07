@@ -14,3 +14,16 @@
     - base
     - role: workstation 
       when: ansible_default_ipv4.address in ["192.168.178.2",]
+
+  tasks:
+    - name: cleanup package cache
+      apt:
+        autoclean: yes
+      changed_when: false
+      when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+
+    - name: autoremove orphan packages
+      apt:
+        autoremove: yes
+        purge: yes
+      when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
