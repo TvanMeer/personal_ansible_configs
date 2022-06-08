@@ -1,0 +1,15 @@
+---
+- name: remove standard directories in home folder
+  become_user: tom
+  file:
+    path: /home/tom/{{ item }}
+    state: absent
+  with_items:
+    - examples.desktop
+    - Documents
+    - Downloads
+    - Music
+    - Pictures
+    - Public
+    - Templates
+    - Videos
