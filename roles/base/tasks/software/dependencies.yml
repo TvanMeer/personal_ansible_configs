@@ -1,7 +1,9 @@
 ---
-- name: install apt packages for base role
+- name: install dependencies
   apt:
     name:
-      - htop
+      - apt-transport-https
+      - ca-certificates
+      - gnupg
     state: latest
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]

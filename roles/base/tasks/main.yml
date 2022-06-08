@@ -5,5 +5,8 @@
 - name: setup cronjobs
   import_tasks: system_setup/cron.yml
 
+- name: install mandatory dependencies
+  import_tasks: software/dependencies.yml
+
 - name: install packages through standard package manager
   import_tasks: software/packages.yml
