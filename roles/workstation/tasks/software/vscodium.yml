@@ -15,3 +15,10 @@
     name: codium
     state: latest
     update_cache: yes
+
+- name: configure marketplace api endpoints
+  become_user: tom
+  copy:
+    src: vscodium/product.json
+    dest: ~/.config/VSCodium
+    mode: 0700
