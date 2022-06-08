@@ -3,6 +3,7 @@
   package:
     state: absent
     name:
+      # show all with 'apt list --installed'
       - wbrazilian
       - wbritish
       - wfrench
