@@ -6,4 +6,4 @@
   import_tasks: system_setup/cron.yml
 
 - name: install packages through standard package manager
-  import_tasks: software/packages.yml
+  import_tasks: software/_packages.yml
