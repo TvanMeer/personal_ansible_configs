@@ -7,4 +7,3 @@
       - gnupg
     state: latest
     autoclean: true
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]

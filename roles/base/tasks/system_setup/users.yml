@@ -11,4 +11,3 @@
     owner: root
     group: root
     mode: 0440
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]

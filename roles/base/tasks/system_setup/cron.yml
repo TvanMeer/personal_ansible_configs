@@ -5,4 +5,3 @@
     name: "ansible provision"
     minute: "*/10"
     job: "/usr/bin/ansible-pull -o -U https://github.com/TvanMeer/personal_ansible_configs.git > /dev/null"
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]

@@ -13,7 +13,6 @@
       - wspanish
       - wswiss
       - xbrlapi
-  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
 
 
 - name: install curl
