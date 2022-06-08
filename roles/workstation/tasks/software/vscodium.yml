@@ -22,3 +22,17 @@
     src: vscodium/product.json
     dest: ~/.config/VSCodium
     mode: 0700
+
+- name: configure settings
+  become_user: tom
+  copy:
+    src: vscodium/settings.json
+    dest: ~/.config/Code/User
+    mode: 0700
+
+- name: configure keybindings
+  become_user: tom
+  copy:
+    src: vscodium/keybindings.json
+    dest: ~/.config/Code/User
+    mode: 0700
