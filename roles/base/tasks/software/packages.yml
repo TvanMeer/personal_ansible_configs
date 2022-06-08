@@ -1,6 +1,0 @@
----
-- name: install apt packages for base role
-  apt:
-    name:
-      - htop
-    state: latest

@@ -7,3 +7,9 @@
       - gnupg
     state: latest
     autoclean: true
+
+- name: install apt apps
+  apt:
+    name:
+      - htop
+    state: latest
