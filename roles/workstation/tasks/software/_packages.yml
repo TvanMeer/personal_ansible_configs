@@ -1,4 +1,21 @@
 ---
+- name: remove unwanted packages
+  package:
+    state: absent
+    name:
+      - wbrazilian
+      - wbritish
+      - wfrench
+      - witalian
+      - wngerman
+      - wogerman
+      - wportuguese
+      - wspanish
+      - wswiss
+      - xbrlapi
+  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+
+
 - name: install curl
   import_tasks: curl.yml
 
