@@ -1,3 +1,4 @@
+---
 - name: copy wallpaper file
   copy:
     src: wallpaper.png
