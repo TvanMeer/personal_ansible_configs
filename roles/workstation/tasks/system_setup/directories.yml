@@ -13,3 +13,15 @@
     - Public
     - Templates
     - Videos
+
+- name: create new home directories
+  file:
+    path: /home/tom/{{ item.dir }}
+    state: directory
+    owner: tom
+    group: tom
+    mode: 0700
+  with_items:
+    - { dir: downloads } 
+    - { dir: GITHUB }
+    - { dir: .ssh }
