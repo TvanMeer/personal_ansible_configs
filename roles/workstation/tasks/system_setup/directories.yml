@@ -25,4 +25,3 @@
     - { dir: Desktop } 
     - { dir: downloads } 
     - { dir: GITHUB }
-    - { dir: .ssh }
