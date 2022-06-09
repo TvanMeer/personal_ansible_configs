@@ -16,23 +16,16 @@
     state: latest
     update_cache: yes
 
-- name: configure marketplace api endpoints
+- name: copy configuration files
   become_user: tom
   copy:
-    src: vscodium/product.json
-    dest: ~/.config/VSCodium
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     mode: 0700
-
-- name: configure settings
-  become_user: tom
-  copy:
-    src: vscodium/settings.json
-    dest: ~/.config/Code/User
-    mode: 0700
-
-- name: configure keybindings
-  become_user: tom
-  copy:
-    src: vscodium/keybindings.json
-    dest: ~/.config/Code/User
-    mode: 0700
+  with_items:
+    - src: vscodium/product.json
+      dest: ~/.config/VSCodium
+    - src: vscodium/settings.json
+      dest: ~/.config/VSCodium/User
+    - src: vscodium/keybindings.json
+      dest: ~/.config/VSCodium/User
