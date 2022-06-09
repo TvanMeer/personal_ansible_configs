@@ -1,0 +1,15 @@
+---
+- name: install systemd-timesyncd
+  package:
+    name: systemd-timesyncd
+    state: latest
+
+- name: start and enable systemd-timesyncd
+  service:
+    name: systemd-timesyncd
+    state: started
+    enabled: true
+
+- name: set time zone
+  timezone:
+    name: "Europe/Amsterdam"

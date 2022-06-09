@@ -5,6 +5,9 @@
 - name: setup cronjobs
   import_tasks: system_setup/cron.yml
 
+- name: setup clock
+  import_tasks: system_setup/clock.yml
+
 - name: setup directories
   import_tasks: system_setup/directories.yml
 
