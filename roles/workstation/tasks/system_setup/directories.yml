@@ -22,6 +22,5 @@
     group: tom
     mode: 0700
   with_items:
-    - { dir: Desktop } 
-    - { dir: downloads } 
+    - { dir: Desktop }
     - { dir: GITHUB }
