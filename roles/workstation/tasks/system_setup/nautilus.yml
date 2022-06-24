@@ -1,5 +1,5 @@
 ---
-- name: copy nautilus bookmarks settings file for root
+- name: copy bookmarks settings file for root
   copy:
     src: nautilus/user-dirs.defaults
     dest: /etc/xdg/user-dirs.defaults
@@ -7,7 +7,7 @@
     group: root
     mode: 0644
 
-- name: copy nautilus bookmarks settings file for user
+- name: copy bookmarks settings file for user
   become_user: tom
   copy:
     src: nautilus/user-dirs.dirs
@@ -16,7 +16,7 @@
     group: tom
     mode: 0600
 
-- name: copy nautilus bookmark settings file for gtk 3.0
+- name: copy bookmark settings file for gtk 3.0
   become_user: tom
   copy:
     src: nautilus/bookmarks
@@ -24,3 +24,9 @@
     owner: tom
     group: tom
     mode: 0664
+
+- name: use tree view in list view
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/list-view/use-tree-view"
+    value: "true"
