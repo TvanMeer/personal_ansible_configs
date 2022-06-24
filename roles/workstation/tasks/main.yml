@@ -2,6 +2,9 @@
 - name: set folder structure in home directory
   import_tasks: system_setup/directories.yml
 
+- name: configure nautilus file manager
+  import_tasks: system_setup/nautilus.yml
+
 - name: set wallpaper
   import_tasks: system_setup/wallpaper.yml
 
