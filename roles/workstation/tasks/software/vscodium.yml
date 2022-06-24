@@ -29,3 +29,19 @@
       dest: ~/.config/VSCodium/User
     - src: vscodium/keybindings.json
       dest: ~/.config/VSCodium/User
+
+- name: get list of installed extensions
+  become_user: tom
+  shell: codium --list-extensions
+  register: extensions_list
+  changed_when: false
+
+- name: install plugins
+  become_user: tom
+  shell: "codium --install-extension {{ item }}"
+  with_items:
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - ms-toolsai.jupyter-keymap
+    - ms-toolsai.jupyter-renderers
+  when: item not in extensions_list.stdout_lines
