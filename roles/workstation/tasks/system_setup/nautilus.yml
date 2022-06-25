@@ -60,3 +60,9 @@
   dconf:
     key: "/org/gnome/nautilus/preferences/show-hidden-files"
     value: "true"
+
+- name: set default window size
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/window-state/initial-size"
+    value: "(1237, 873)"
