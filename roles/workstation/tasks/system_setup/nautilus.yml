@@ -25,8 +25,38 @@
     group: tom
     mode: 0664
 
+- name: set icon view size
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/icon-view/default-zoom-level"
+    value: "'small'"
+
+- name: select list view visible columns
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/list-view/default-visible-columns"
+    value: "['name', 'size', 'date_modified']"
+
 - name: use tree view in list view
   become_user: tom
   dconf:
     key: "/org/gnome/nautilus/list-view/use-tree-view"
+    value: "true"
+
+- name: set single click policy
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/preferences/click-policy"
+    value: "'single'"
+
+- name: set default folder viewer
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/preferences/default-folder-viewer"
+    value: "'icon-view'"
+
+- name: show hidden files
+  become_user: tom
+  dconf:
+    key: "/org/gnome/nautilus/preferences/show-hidden-files"
     value: "true"
