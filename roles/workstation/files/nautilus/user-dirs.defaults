@@ -2,16 +2,15 @@
 #
 # The values are relative pathnames from the home directory and
 # will be translated on a per-path-element basis into the users locale
+
+AANTEKENINGEN=Aantekeningen
+ADMINISTRATIE=Administratie
+BRAINSTORM=Brainstorm
+CHEATSHEETS=Cheatsheets
+CODE=Code
 DESKTOP=Desktop
-GITHUB=GITHUB
-# DOWNLOAD=Downloads
-# TEMPLATES=Templates
-# PUBLICSHARE=Public
-# DOCUMENTS=Documents
-# MUSIC=Music
-# PICTURES=Pictures
-# VIDEOS=Videos
-# Another alternative is:
-#MUSIC=Documents/Music
-#PICTURES=Documents/Pictures
-#VIDEOS=Documents/Videos
+DUMP=Dump
+GITHUB=Github
+LOGS=Logs
+STUDIE=Studie
+WERK=Werk

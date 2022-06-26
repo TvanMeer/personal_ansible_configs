@@ -22,5 +22,14 @@
     group: tom
     mode: 0700
   with_items:
+    - { dir: Aantekeningen }
+    - { dir: Administratie }
+    - { dir: Brainstorm }
+    - { dir: Cheatsheets }
+    - { dir: Code }
     - { dir: Desktop }
-    - { dir: GITHUB }
+    - { dir: Dump }
+    - { dir: Github }
+    - { dir: Logs }
+    - { dir: Studie }
+    - { dir: Werk }

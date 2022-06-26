@@ -8,3 +8,4 @@
     mode: 0700
   with_items:
     - { dir: .ssh }
+    - { dir: .geheim }
