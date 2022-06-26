@@ -3,7 +3,10 @@
   import_tasks: system_setup/directories.yml
 
 - name: configure nautilus file manager
-  import_tasks: system_setup/nautilus.yml
+  import_tasks: system_setup/gnome/nautilus.yml
+
+- name: configure desktop interface settings
+  import_tasks: system_setup/gnome/interface.yml
 
 - name: set wallpaper
   import_tasks: system_setup/wallpaper.yml

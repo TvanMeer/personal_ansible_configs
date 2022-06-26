@@ -1,0 +1,27 @@
+---
+- name: set gnome.desktop.interface dconf settings
+  become_user: tom
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - key: "/org/gnome/desktop/interface/clock-format"
+      value: "'24h'"
+    - key: "/org/gnome/desktop/interface/clock-show-date"
+      value: "false"
+    - key: "/org/gnome/desktop/interface/clock-show-weekday"
+      value: "true"
+    - key: "/org/gnome/desktop/interface/color-scheme"
+      value: "'prefer-light'"
+    - key: "/org/gnome/desktop/interface/document-font-name"
+      value: "'Noto Serif 11'"
+    - key: "/org/gnome/desktop/interface/font-antialiasing"
+      value: "'rgba'"
+    - key: "/org/gnome/desktop/interface/font-hinting"
+      value: "'slight'"
+    - key: "/org/gnome/desktop/interface/font-name"
+      value: "'Noto Sans Display 10'"
+    - key: "/org/gnome/desktop/interface/monospace-font-name"
+      value: "'Noto Mono 11'"
+    - key: "/org/gnome/desktop/interface/toolbar-icons-size"
+      value: "'small'"
