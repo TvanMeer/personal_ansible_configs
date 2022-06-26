@@ -1,7 +1,9 @@
 ---
 - name: remove unwanted packages
   package:
+    force_apt_get: yes
     state: absent
+    purge: yes
     name:
       # show all with 'apt list --installed'
       - wbrazilian
