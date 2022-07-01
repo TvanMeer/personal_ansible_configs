@@ -12,7 +12,7 @@
 
 - name: create vault keyfile
   file:
-    path: /home/tom/.geheim/ansible_vault_file
+    path: /home/tom/.geheim/ansible_vault_key
     owner: tom
     group: tom
     mode: 0600
