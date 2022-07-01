@@ -6,18 +6,6 @@
 # absolute path. No other format is supported.
 # 
 
-#XDG_AANTEKENINGEN_DIR="$HOME/Aantekeningen"
-#XDG_ADMINISTRATIE_DIR="$HOME/Administratie"
-#XDG_BRAINSTORM_DIR="$HOME/Brainstorm"
-#XDG_CHEATSHEETS_DIR="$HOME/Cheatsheets"
-#XDG_CODE_DIR="$HOME/Code"
-#XDG_DESKTOP_DIR="$HOME/Desktop"
-#XDG_DUMP_DIR="$HOME/Dump"
-#XDG_GITHUB_DIR="$HOME/Github"
-#XDG_LOGS_DIR="$HOME/Logs"
-#XDG_STUDIE_DIR="$HOME/Studie"
-#XDG_WERK_DIR="$HOME/Werk"
-
 {% for folder in create_dirs %}
 XDG_{{ folder|upper }}_DIR="$HOME/{{ folder }}"
 {% endfor %}
