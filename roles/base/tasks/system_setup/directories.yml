@@ -1,14 +1,12 @@
 ---
 - name: create new home directories
   file:
-    path: /home/tom/{{ item.dir }}
+    path: /home/tom/{{ item }}
     state: directory
     owner: tom
     group: tom
     mode: 0700
-  with_items:
-    - { dir: .ssh }
-    - { dir: .geheim }
+  with_items: "{{ create_dirs }}"
 
 - name: create vault keyfile
   file:

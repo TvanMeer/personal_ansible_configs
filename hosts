@@ -1,0 +1,4 @@
+localhost ansible_connection=local
+
+[workstation]
+workstation1 ansible_connection=local

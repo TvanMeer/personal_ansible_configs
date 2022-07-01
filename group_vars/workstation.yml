@@ -1,0 +1,46 @@
+---
+remove_dirs:
+  - examples.desktop
+  - Documents
+  - Downloads
+  - Music
+  - Pictures
+  - Public
+  - Templates
+  - Videos
+
+  
+create_dirs:
+  - Aantekeningen
+  - Administratie
+  - Brainstorm
+  - Cheatsheets
+  - Code
+  - Desktop
+  - Dump
+  - Github
+  - Logs
+  - Studie
+  - Werk
+
+
+remove_packages:
+  # show all with 'apt list --installed'
+  - wbrazilian
+  - wbritish
+  - wfrench
+  - witalian
+  - wngerman
+  - wogerman
+  - wportuguese
+  - wspanish
+  - wswiss
+  - xbrlapi
+
+
+install_packages:
+  # install dependencies
+  - curl
+  - git
+  - gnome-keyring
+  - python3-pip

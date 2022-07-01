@@ -4,32 +4,13 @@
   file:
     path: /home/tom/{{ item }}
     state: absent
-  with_items:
-    - examples.desktop
-    - Documents
-    - Downloads
-    - Music
-    - Pictures
-    - Public
-    - Templates
-    - Videos
+  with_items: "{{ remove_dirs }}"
 
 - name: create new home directories
   file:
-    path: /home/tom/{{ item.dir }}
+    path: /home/tom/{{ item }}
     state: directory
     owner: tom
     group: tom
     mode: 0700
-  with_items:
-    - { dir: Aantekeningen }
-    - { dir: Administratie }
-    - { dir: Brainstorm }
-    - { dir: Cheatsheets }
-    - { dir: Code }
-    - { dir: Desktop }
-    - { dir: Dump }
-    - { dir: Github }
-    - { dir: Logs }
-    - { dir: Studie }
-    - { dir: Werk }
+  with_items: "{{ create_dirs }}"

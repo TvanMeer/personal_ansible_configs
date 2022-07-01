@@ -1,7 +1,7 @@
 ---
 - name: copy bookmarks settings file for root
-  copy:
-    src: nautilus/user-dirs.defaults
+  template:
+    src: nautilus/user-dirs.defaults.j2
     dest: /etc/xdg/user-dirs.defaults
     owner: root
     group: root
@@ -9,8 +9,8 @@
 
 - name: copy bookmarks settings file for user
   become_user: tom
-  copy:
-    src: nautilus/user-dirs.dirs
+  template:
+    src: nautilus/user-dirs.dirs.j2
     dest: ~/.config/user-dirs.dirs
     owner: tom
     group: tom
@@ -18,9 +18,9 @@
 
 - name: copy bookmark settings file for gtk 3.0
   become_user: tom
-  copy:
-    src: nautilus/bookmarks
-    dest: ~/.config/gtk-3.0
+  template:
+    src: nautilus/bookmarks.j2
+    dest: ~/.config/gtk-3.0/bookmarks
     owner: tom
     group: tom
     mode: 0664

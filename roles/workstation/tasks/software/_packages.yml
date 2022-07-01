@@ -1,31 +1,18 @@
 ---
 - name: remove unwanted packages
-  package:
-    force_apt_get: yes
+  apt:
+    name: "{{ item }}"
     state: absent
     purge: yes
-    name:
-      # show all with 'apt list --installed'
-      - wbrazilian
-      - wbritish
-      - wfrench
-      - witalian
-      - wngerman
-      - wogerman
-      - wportuguese
-      - wspanish
-      - wswiss
-      - xbrlapi
+  with_items: "{{ remove_packages }}"
+
 
 - name: install dependencies
   apt:
-    name:
-      - gnome-keyring
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ install_packages }}"
 
-
-- name: install curl
-  import_tasks: curl.yml
 
 - name: install vscodium
   import_tasks: vscodium.yml

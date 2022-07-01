@@ -1,27 +1,35 @@
 ---
-- hosts: localhost
-  connection: local
+# Run update and base role on all hosts
+- hosts: all
   become: true
-
   pre_tasks:
     - name: update repositories
-      apt:
-        update_cache: true
-        cache_valid_time: 3600
-      changed_when: false
+      apt: 
+        update_cache: yes
 
+
+# Run base role on all hosts
+- hosts: all
+  become: true
   roles:
     - base
-    - role: workstation 
-      when: ansible_default_ipv4.address in ["192.168.178.2",]
 
+
+# Run workstation role on hosts in workstation group
+- hosts: workstation
+  become: true
+  roles:
+    - workstation
+    
+
+# Cleanup on all hosts
+- hosts: all
+  become: true
   tasks:
-    - name: cleanup package cache
-      apt:
-        autoclean: true
-      changed_when: false
-
-    - name: autoremove orphan packages
-      apt:
-        autoremove: true
-        purge: true
+  - name: cleanup package cache
+    apt:
+      autoclean: yes
+  - name: autoremove orphan packages
+    apt:
+      autoremove: yes
+      purge: yes
