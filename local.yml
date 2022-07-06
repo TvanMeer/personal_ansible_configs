@@ -22,10 +22,14 @@
     - workstation
     
 
-# Cleanup on all hosts
+# Update and cleanup packages on all hosts
 - hosts: all
   become: true
-  tasks:
+  post_tasks:
+  - name: update repositories again and upgrade packages
+    apt: 
+      upgrade: dist
+      update_cache: yes
   - name: cleanup package cache
     apt:
       autoclean: yes

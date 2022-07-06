@@ -3,5 +3,4 @@
   apt:
     name: "{{ item }}"
     state: latest
-    autoclean: true
   with_items: "{{ install_packages }}"
