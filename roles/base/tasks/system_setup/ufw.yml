@@ -1,0 +1,14 @@
+---
+- name: allow all connections by default and enable ufw
+  ufw:
+    state: enabled
+    policy: allow
+
+- name: set logging
+  ufw:
+    logging: 'on'
+
+- name: deny incoming requests
+  ufw:
+    rule: deny
+    direction: in
