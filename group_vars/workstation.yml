@@ -6,7 +6,6 @@ remove_dirs:
   - Music
   - Pictures
   - Public
-  - Templates
   - Videos
 
   
@@ -21,6 +20,7 @@ create_dirs:
   - Github
   - Logs
   - Studie
+  - Templates
   - Werk
 
 
@@ -41,6 +41,5 @@ remove_packages:
 install_packages:
   # install dependencies
   - curl
-  - git
   - gnome-keyring
   - python3-pip
