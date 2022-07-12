@@ -3,7 +3,6 @@ remove_dirs:
 
 create_dirs:
   - .ssh
-  - .geheim
 
 remove_packages:
 
