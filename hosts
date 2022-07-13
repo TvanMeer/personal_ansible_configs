@@ -1,2 +1,5 @@
 [workstation]
 workstation1 ansible_connection=local
+
+[all:vars]
+repo = https://github.com/TvanMeer/personal_ansible_configs.git

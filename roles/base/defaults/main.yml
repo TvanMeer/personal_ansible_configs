@@ -1,1 +1,16 @@
 ---
+remove_dirs:
+
+create_dirs:
+  - .ssh
+
+remove_packages:
+
+install_packages:
+  - ansible
+  - apt-transport-https
+  - ca-certificates
+  - git
+  - gnupg
+  - htop
+  - software-properties-common
