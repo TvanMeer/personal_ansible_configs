@@ -1,0 +1,4 @@
+---
+- name: set ip address
+  ip: "{{ new_ip }}"
+  interface: "{{  new_network_interface }}"
