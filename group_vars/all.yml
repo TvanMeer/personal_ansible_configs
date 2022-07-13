@@ -14,3 +14,7 @@ install_packages:
   - gnupg
   - htop
   - software-properties-common
+
+
+# Defaults for ansible
+repo: https://github.com/TvanMeer/personal_ansible_configs.git

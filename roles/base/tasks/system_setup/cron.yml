@@ -4,4 +4,4 @@
     name: ansible auto-provision
     user: ansible
     minute: "*/20"
-    job: "/usr/bin/ansible-pull -o -U https://github.com/TvanMeer/personal_ansible_configs.git"
+    job: "/usr/bin/ansible-pull -o -U {{ repo }}"
