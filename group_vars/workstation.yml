@@ -43,3 +43,7 @@ install_packages:
   - curl
   - gnome-keyring
   - python3-pip
+
+
+# Defaults for ansible
+repo: https://github.com/TvanMeer/personal_ansible_configs.git
