@@ -6,6 +6,7 @@
     state: absent
   with_items: "{{ remove_dirs }}"
 
+
 - name: create new home directories
   file:
     path: /home/tom/{{ item }}
@@ -14,3 +15,12 @@
     group: tom
     mode: 0700
   with_items: "{{ create_dirs }}"
+
+
+- name: copy ubuntu templates
+  copy:
+    src: ubuntu_templates/
+    dest: /home/tom/Templates
+    owner: tom
+    group: tom
+    mode: 0770

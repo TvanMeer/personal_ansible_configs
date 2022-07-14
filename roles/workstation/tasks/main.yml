@@ -14,9 +14,6 @@
 - name: set wallpaper
   import_tasks: system_setup/wallpaper.yml
 
-- name: copy ubuntu templates
-  import_tasks: system_setup/ubuntu_templates.yml
-
 
 
 # software installer (workstation)
