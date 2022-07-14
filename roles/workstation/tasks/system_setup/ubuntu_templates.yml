@@ -1,5 +1,6 @@
 ---
 - name: copy ubuntu templates
+  become_user: tom
   copy:
     src: ubuntu_templates/
     dest: /home/tom/Templates
