@@ -1,7 +1,4 @@
 ---
-- name: set network connection
-  import_tasks: system_setup/network.yml
-
 - name: create system users
   import_tasks: system_setup/users.yml
 
