@@ -1,0 +1,8 @@
+---
+- name: copy ubuntu templates
+  copy:
+    src: ubuntu_templates/
+    dest: /home/tom/Templates
+    directory_mode: yes
+    owner: tom
+    group: tom
