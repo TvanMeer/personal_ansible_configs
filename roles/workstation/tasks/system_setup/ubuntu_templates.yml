@@ -6,3 +6,4 @@
     directory_mode: yes
     owner: tom
     group: tom
+    mode: 0770
