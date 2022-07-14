@@ -1,4 +1,7 @@
 ---
+
+# system setup (base)
+
 - name: create system users
   import_tasks: system_setup/users.yml
 
@@ -8,11 +11,14 @@
 - name: setup clock
   import_tasks: system_setup/clock.yml
 
-- name: setup directories
+- name: setup base directories
   import_tasks: system_setup/directories.yml
-
-- name: install packages through standard package manager
-  import_tasks: software/_packages.yml
 
 - name: setup firewall
   import_tasks: system_setup/ufw.yml
+
+
+# software installer (base)
+
+- name: install packages through standard package manager
+  import_tasks: software/_packages.yml

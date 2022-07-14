@@ -1,4 +1,7 @@
 ---
+
+# system setup (workstation)
+
 - name: set folder structure in home directory
   import_tasks: system_setup/directories.yml
 
@@ -10,6 +13,13 @@
 
 - name: set wallpaper
   import_tasks: system_setup/wallpaper.yml
+
+- name: copy ubuntu templates
+  import_tasks: system_setup/ubuntu_templates.yml
+
+
+
+# software installer (workstation)
 
 - name: install packages through standard package manager
   import_tasks: software/_packages.yml
