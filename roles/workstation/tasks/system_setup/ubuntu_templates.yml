@@ -1,16 +1,8 @@
 ---
 - name: copy ubuntu templates
-  become_user: tom
   copy:
     src: ubuntu_templates/
-    dest: /home/tom/Templates/
-
-
-- name: set ubuntu templates permissions
-  become_user: tom
-  file:
-    dest: /home/tom/Templates/
+    dest: /home/tom/Templates
     owner: tom
     group: tom
     mode: 0770
-    recurse: yes
