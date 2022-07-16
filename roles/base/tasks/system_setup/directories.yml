@@ -9,15 +9,6 @@
   with_items: "{{ create_dirs }}"
 
 
-- name: set Logs folder permissions
-  file:
-    path: /home/tom/Logs
-    state: directory
-    owner: tom
-    group: root
-    mode: 0620
-
-
 - name: create vault keyfile
   file:
     path: /home/ansible/.vaultkey
