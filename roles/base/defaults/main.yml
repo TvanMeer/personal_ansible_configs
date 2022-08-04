@@ -24,4 +24,4 @@ log_symlinks:
   '/var/log/apt/history.log': apt_history
   '/var/log/apt/term.log'   : apt_output
   '/var/log/cups/access_log': printer_access
-  # '/var/log/ufw.log'      : firewall
+  '/var/log/ufw.log'        : firewall
