@@ -1,10 +1,8 @@
 ---
-remove_dirs:
-
 create_dirs:
   - .ssh
+  - Logs
 
-remove_packages:
 
 install_packages:
   - ansible
@@ -14,3 +12,16 @@ install_packages:
   - gnupg
   - htop
   - software-properties-common
+
+
+log_symlinks:
+  # path to logfile         : symlink name
+  '/var/log/ansible.log'    : ansible
+  '/var/log/auth.log'       : system_auth
+  '/var/log/boot.log'       : system_boot
+  '/var/log/dpkg.log'       : dpkg_packages
+  '/var/log/syslog'         : syslog
+  '/var/log/apt/history.log': apt_history
+  '/var/log/apt/term.log'   : apt_output
+  '/var/log/cups/access_log': printer_access
+  # '/var/log/ufw.log'      : firewall

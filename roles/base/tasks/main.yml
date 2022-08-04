@@ -17,6 +17,9 @@
 - name: setup firewall
   import_tasks: system_setup/ufw.yml
 
+- name: configure everything related to logs
+  import_tasks: system_setup/logs.yml
+
 
 # software installer (base)
 

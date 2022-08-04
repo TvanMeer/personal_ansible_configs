@@ -1,0 +1,7 @@
+---
+- name: create symlinks in logs directory
+  file:
+    src: '{{ item.key }}'
+    dest: '/home/tom/Logs/{{ item.value }}'
+    state: link
+  loop: "{{ lookup('ansible.builtin.dict', log_symlinks) }}"
