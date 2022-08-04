@@ -6,7 +6,6 @@ remove_dirs:
   - Music
   - Pictures
   - Public
-  - Templates
   - Videos
 
   
@@ -19,7 +18,6 @@ create_dirs:
   - Desktop
   - Dump
   - Github
-  - Logs
   - Studie
   - Werk
 
