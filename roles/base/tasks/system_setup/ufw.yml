@@ -12,12 +12,14 @@
     direction: incoming
     policy: deny
 
+
 - name: create logfile
   file:
     path: /var/log/ufw.log
     owner: syslog
     group: adm
     mode: '0640'
+
 
 - name: switch on logging, default level low
   ufw:

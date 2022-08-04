@@ -4,6 +4,7 @@
     name: ansible
     system: yes
 
+
 - name: setup sudo for ansible user
   copy:
     src: sudoer_ansible

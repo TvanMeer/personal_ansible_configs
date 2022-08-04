@@ -7,11 +7,13 @@
     group: root
     mode: 0644
 
+
 - name: set wallpaper
   become_user: tom
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///usr/share/backgrounds/wallpaper.png'"
+
 
 - name: set wallpaper position
   become_user: tom

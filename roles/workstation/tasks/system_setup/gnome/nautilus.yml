@@ -7,6 +7,7 @@
     group: root
     mode: 0644
 
+
 - name: copy bookmarks settings file for user
   become_user: tom
   template:
@@ -16,6 +17,7 @@
     group: tom
     mode: 0600
 
+
 - name: copy bookmark settings file for gtk 3.0
   become_user: tom
   template:
@@ -24,6 +26,7 @@
     owner: tom
     group: tom
     mode: 0664
+
 
 - name: set dconf settings
   become_user: tom

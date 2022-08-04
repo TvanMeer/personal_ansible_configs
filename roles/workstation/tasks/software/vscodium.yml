@@ -4,17 +4,20 @@
     url: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
     state: present
 
+
 - name: add vscodium repository
   apt_repository:
     repo: deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main
     state: present
     update_cache: true
 
+
 - name: install vscodium
   apt:
     name: codium
     state: latest
     update_cache: yes
+
 
 - name: copy configuration files
   become_user: tom
@@ -30,11 +33,13 @@
     - src: vscodium/keybindings.json
       dest: ~/.config/VSCodium/User
 
+
 - name: get list of installed extensions
   become_user: tom
   shell: codium --list-extensions
   register: extensions_list
   changed_when: false
+
 
 - name: install plugins
   become_user: tom
