@@ -5,6 +5,9 @@
 - name: create system users
   import_tasks: system_setup/users.yml
 
+- name: set environment variables
+  import_tasks: system_setup/envvars.yml
+
 - name: setup cronjobs
   import_tasks: system_setup/cron.yml
 

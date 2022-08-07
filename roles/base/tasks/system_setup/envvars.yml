@@ -1,0 +1,10 @@
+---
+- name: set ansible.cfg path as environment variable
+  become_user: ansible
+  lineinfile:
+    path: ~/.profile
+    search_string: 'export ANSIBLE_CONFIG'
+    line: 'export ANSIBLE_CONFIG="/home/tom/Github/personal_ansible_configs/ansible.cfg"'
+    owner: ansible
+    group: ansible
+    mode: '0644'
