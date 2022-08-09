@@ -1,4 +1,11 @@
 ---
+- name: set ownership of ansible.log to user ansible
+  file:
+    path: /var/log/ansible.log
+    owner: ansible
+    group: root
+    mode: 0644
+
 - name: create ansible-pull logfile
   copy:
     content: ""
